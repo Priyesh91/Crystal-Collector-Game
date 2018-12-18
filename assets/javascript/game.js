@@ -7,16 +7,12 @@ var magicNum = 0
 //added another variable to represent currentmagicNUM since cannot have 2 same variables
 var currentmagicNum = 0;
 
-var cry1Num;
-var cry2Num;
-var cry3Num;
-var cry4Num;
-
 
 var wins = 0;
 var losses = 0;
 
-
+$(".wins-text").append(wins);
+$(".losses-text").append(losses);
 
 
 function magicNumGenerator() {

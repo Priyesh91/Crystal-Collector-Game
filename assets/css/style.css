@@ -1,4 +1,13 @@
+* {
+  color: white;
+}
+body {
+  background-image: url("./../images/space1.jpg");
+}
 .title {
   font-size: 50px;
   color: red;
 }
+.button {
+  width: 200px;
+  }
