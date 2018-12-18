@@ -43,7 +43,7 @@ $(function cryNumGenerator() {
 //   });
 
 
-$(function magicNumCalc() {
+$(document).ready(function magicNumCalc() {
   //click funtion for cry1-cry4, when clicked the number value generated should subtract from the magicNum value
   // startgame();
   //cry1
@@ -68,20 +68,18 @@ $(function magicNumCalc() {
   });
 
 
+  //assign conditions for when the value hits 0 player wins and counter increases
+  if (currentMagicNum === 0) {
+    wins++;
+    $(".wins-text").html(wins);
+    // startgame();
+    alert("YOU WIN!!!");
+  }
 
-//assign conditions for when the value hits 0 player wins and counter increases
-if (magicNum === 0) {
-  wins++;
-  $(".wins-text").html(wins);
-  // startgame();
-  alert("YOU WIN!!!");
-}
-
-//assign conditions for when the value hits below 0 player looses counter increases
-else if (magicNum < 0) {
-  losses++;
-  $(".losses-text").html(losses);
-  alert("YOU LOST!!!");
-}
-
+  //assign conditions for when the value hits below 0 player looses counter increases
+  else if (currentMagicNum < 0) {
+    losses++;
+    $(".losses-text").html(losses);
+    alert("YOU LOST!!!");
+  }
 });
