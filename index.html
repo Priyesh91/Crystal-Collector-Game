@@ -7,80 +7,85 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-  <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/style.css">
-
   <title>Crystal Game</title>
 </head>
-<div class="jumbotron jumbotron-fluid bg-transparent">
-  <div class="container">
-    <h1 class="display-4 ">Crystal-Game</h1>
-   
-  </div>
-</div>
 
-<br>
-<br>
-<br>
-<!-- 
+<body>
+  <div class="jumbotron jumbotron-fluid bg-transparent crytitle text-center ml-0 pb-1 mb-1 pt-3">
+    <div class="container crytitle">
+      Crystal-Game
+    </div>
+  </div>
+  <!-- Start of container for body content -->
+  <div class="container border">
+    <!-- first row here -->
+    <div class="container row">
+      <!-- first row content to be flexed and centered -->
+      <div class="container text-center instruction">
+        <p class="p1">Make the magic number hit EXACTLY ZERO by clicking on the crystals.</p>
+        Rules:
+        <br> 1.) Crystals will have a hidden value at the start of each game.
+        <br>2.) Click the crystal to find out how much is taken away from the magic number.
+        <br>3.) Click the crystals in various combinations to make the number reach EXACTLY ZERO!
+        <br>4.) You Win if you hit zero but if you go past zero you loose!
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <br>
+  <br>
+  <!-- 
 <div class="container container-fluid title">
   Crystal Game
 </div> -->
 
-<div class="container instructions container-fluid">
-  Make the magic number hit EXACTLY ZERO by clicking on the crystals.
-  <br><br>Rules:
-  <br> 1.) Crystals will have a hidden value at the start of each game.
-  <br>2.) Click the crystal to find out how much is taken away from the magic number.
-  <br>3.) Click the crystals in various combinations to make the number reach EXACTLY ZERO!
-  <br>4.) You Win if you hit zero but if you go past zero you loose!
-</div>
 
-<br>
-<br>
-<br>
 
-<div class="container">
-  Magic Number
-  <div class="container magicnum-text">
+  <div class="container">
+    Magic Number
+    <div class="container magicnum-text">
+    </div>
   </div>
-</div>
 
-<br>
-<br>
-<br>
+  </div>
+  <br>
+  <br>
+  <br>
 
-<div class="button container cry1-text">
-  <img src="assets/images/cry1-image.png" class="img-fluid" alt="image of crystal 1">
-</div>
+  <div class="button container cry1-text">
+    <img src="assets/images/cry1-image.png" class="img-fluid" alt="image of crystal 1">
+  </div>
 
-<div class="button container cry2-text">
+  <div class="button container cry2-text">
     <img src="assets/images/cry-2.png" class="img-fluid" alt="image of crystal 2">
-</div>
+  </div>
 
-<div class="button container cry3-text">
+  <div class="button container cry3-text">
     <img src="assets/images/cry-3.png" class="img-fluid" alt="image of crystal 3">
-</div>
+  </div>
 
-<div class="button container cry4-text">
+  <div class="button container cry4-text">
     <img src="assets/images/cry-4.png" class="img-fluid" alt="image of crystal 4">
-</div>
+  </div>
 
 
 
-<div class="container wins-text">
-  Wins: 
-</div>
+  <div class="container wins-text">
+    Wins:
+  </div>
 
-<br>
+  <br>
 
 
 
-<div class="container losses-text">
-  Losses: 
-</div>
+  <div class="container losses-text">
+    Losses:
+  </div>
 
-<body>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
