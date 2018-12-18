@@ -2,10 +2,10 @@ var name = "priyesh"
 console.log(name);
 
 
-var magicNum;
+var magicNum = 0
 
 //added another variable to represent currentmagicNUM since cannot have 2 same variables
-var currentmagicNum;
+var currentmagicNum = 0;
 
 var cry1Num;
 var cry2Num;
@@ -19,67 +19,84 @@ var losses = 0;
 
 
 
-$(function magicNumGenerator() {
+function magicNumGenerator() {
   // assign random value between 19-120 to magicNum
   magicNum = Math.floor(Math.random() * 100) + 20;
   console.log(magicNum);
+  currentmagicNum = magicNum;
   // display magicNum value on the HTML page
   $(".magicnum-text").html(magicNum);
-});
+};
 
 
-$(function cryNumGenerator() {
-  //assign random value between 1-12 to cry1Num, cry2Num, cry3Num, cry4Num
-  cry1Num = Math.floor(Math.random() * 11) + 1;
-  cry2Num = Math.floor(Math.random() * 11) + 1;
-  cry3Num = Math.floor(Math.random() * 11) + 1;
-  cry4Num = Math.floor(Math.random() * 11) + 1;
-});
+function setCrystalValue() {
+  $(".button").each(function () {
+    var randomValue = Math.floor(Math.random() * 11) + 1;
 
-// $(function startGame() {
-//   //give set values to start game
-//   magicNumGenerator();
-//   cryNumGenerator();
-//   });
+    $(this).attr("data-value", randomValue);
+    console.log(randomValue)
+  })
+}
+
+function startGame() {
+  //give set values to start game
+  magicNumGenerator();
+  setCrystalValue();
+};
 
 
-$(document).ready(function magicNumCalc() {
+$(document).ready(function () {
   //click funtion for cry1-cry4, when clicked the number value generated should subtract from the magicNum value
-  // startgame();
-  //cry1
-  $(".cry1-text").on("click", function () {
-    currentMagicNum = magicNum - cry1Num;
-    $(".magicnum-text").html(currentMagicNum);
-  });
-  //cry2
-  $(".cry2-text").on("click", function () {
-    currentMagicNum = magicNum - cry1Num;
-    $(".magicnum-text").html(currentMagicNum);
-  });
-  //cry3
-  $(".cry3-text").on("click", function () {
-    currentMagicNum = magicNum - cry1Num;
-    $(".magicnum-text").html(currentMagicNum);
-  });
-  //cry4
-  $(".cry4-text").on("click", function () {
-    currentMagicNum = magicNum - cry1Num;
-    $(".magicnum-text").html(currentMagicNum);
-  });
+  startGame();
+  $(".button").on("click", function () {
+    console.log("hi")
+    var crystalValue = $(this).attr("data-value");
+    currentmagicNum -= crystalValue;
+    $(".magicnum-text").html(currentmagicNum);
+    
+
+    // write new value to page
+
+    if (currentmagicNum === 0) {
+      wins++;
+      $(".wins-text").append(wins);
+      // startgame();
+      startGame();
+      alert("YOU WIN!!!");
+    }
+
+    //assign conditions for when the value hits below 0 player looses counter increases
+    else if (currentmagicNum < 0) {
+      losses++;
+      $(".losses-text").append(losses);
+      startGame();
+      alert("YOU LOST!!!");
+    }
+
+  })
+
+
+  // $(".cry1-text").on("click", function () {
+  //   currentMagicNum = magicNum - cry1Num;
+  //   $(".magicnum-text").html(currentMagicNum);
+  // });
+  // //cry2
+  // $(".cry2-text").on("click", function () {
+  //   currentMagicNum = magicNum - cry1Num;
+  //   $(".magicnum-text").html(currentMagicNum);
+  // });
+  // //cry3
+  // $(".cry3-text").on("click", function () {
+  //   currentMagicNum = magicNum - cry1Num;
+  //   $(".magicnum-text").html(currentMagicNum);
+  // });
+  // //cry4
+  // $(".cry4-text").on("click", function () {
+  //   currentMagicNum = magicNum - cry1Num;
+  //   $(".magicnum-text").html(currentMagicNum);
+  // });
 
 
   //assign conditions for when the value hits 0 player wins and counter increases
-  if (currentMagicNum === 0) {
-    wins++;
-    $(".wins-text").html(wins);
-    // startgame();
-    alert("YOU WIN!!!");
-  }
 
-  //assign conditions for when the value hits below 0 player looses counter increases
-  else if (currentMagicNum < 0) {
-    losses++;
-    $(".losses-text").html(losses);
-    alert("YOU LOST!!!");
-  }
 });
