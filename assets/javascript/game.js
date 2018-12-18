@@ -2,32 +2,60 @@ var name = "priyesh"
 console.log(name);
 
 
-var magicNum = 0;
+var magicNum;
 
-var cry1Num = 0;
-var cry2Num = 0;
-var cry3Num = 0;
-var cry4Num = 0;
+var cry1Num;
+var cry2Num;
+var cry3Num;
+var cry4Num;
 
 
-var win = 0;
+var wins = 0;
 var losses = 0;
 
 
-//start button to start the game and reset magicNum and cryNum values
+$(function startGame() {
+  
+});
+
+$(function magicNumGenerator() {
+  // assign random value between 19-120 to magicNum
+  magicNum = Math.floor(Math.random() * 100) + 20;
+  console.log(magicNum);
+  // display magicNum value on the HTML page
+  $(".magicnum-text").html(magicNum);
+});
 
 
-// assign random value between 19-120 to magicNum
+$(function cryNumGenerator(params) {
+  //assign random value between 1-12 to cry1Num, cry2Num, cry3Num, cry4Num
+  cry1Num = Math.floor(Math.random() * 11) + 1;
+  cry2Num = Math.floor(Math.random() * 11) + 1;
+  cry3Num = Math.floor(Math.random() * 11) + 1;
+  cry4Num = Math.floor(Math.random() * 11) + 1;
+});
 
 
-// display magicNum value on the HTML page
 
 
-//assign random value between 1-12 to cry1Num, cry2Num, cry3Num, cry4Num
 
 //click funtion for cry1-cry4, when clicked the number value generated should subtract from the magicNum value
+$(".cry1-text").on("click", function subtraction(cry1Num) {
+  console.log($(this).attr(cry1Num));
+})
 
 
-//assign conditions for when the value hits 0 player wins and counter increases
-
-//assign conditions for when the value hits below 0 player looses counter increases
+$(function numTractor() {
+  //assign conditions for when the value hits 0 player wins and counter increases
+  if (magicNum === 0) {
+    wins++;
+    $(".wins-text").html(wins);
+    startgame();
+    alert("YOU WIN!!!");
+  } else if (magicNum < 0) {
+    losses++;
+    $(".losses-text").html(losses);
+    alert("YOU LOST!!!");
+  }
+  //assign conditions for when the value hits below 0 player looses counter increases
+});
