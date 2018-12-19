@@ -1,30 +1,34 @@
-
 body {
   background-image: url("./../images/space1.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size : cover;
+  background-size: cover;
 }
+
 .crytitle {
   font-size: 110px;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   color: rgb(35, 240, 171)
 }
+
 .p1 {
   font-size: 18px;
   padding: 0;
   margin: 0;
-  color:  rgb(35, 240, 171);
+  color: rgb(35, 240, 171);
 }
+
 .p2 {
   font-size: 12px;
   padding: 0;
   margin: 0;
   color: rgb(35, 240, 171);
 }
+
 .button {
   width: 150px;
-  }
+}
+
 .mnum {
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 22px;
@@ -36,8 +40,20 @@ body {
   background-size: cover;
   font-weight: bold;
 }
+
 .magicnum-text {
   font-size: 75px;
-  color:rgb(34, 0, 78);
+  color: rgb(34, 0, 78);
 }
- 
+
+.wins-text {
+  color: rgb(57, 224, 57);
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 25px;
+}
+
+.losses-text {
+  color: rgb(182, 10, 10);
+  font-size: 25px;
+  font-family: "Arial Black", Gadget, sans-serif;
+}

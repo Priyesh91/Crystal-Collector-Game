@@ -32,6 +32,22 @@ function startGame() {
   setCrystalValue();
 };
 
+//code fromjsfiddle.net for mouseover animation
+$("#img1, #img2, #img3, #img4").rotate({
+  bind: {
+    mouseover: function () {
+      $(this).rotate({
+        animateTo: 360
+      })
+    },
+    mouseout: function () {
+      $(this).rotate({
+        animateTo: 0
+      })
+    }
+  }
+});
+
 $(document).ready(function () {
   //click funtion for cry1-cry4, when clicked the number value generated should subtract from the magicNum value
   startGame();
@@ -41,10 +57,10 @@ $(document).ready(function () {
     currentmagicNum -= crystalValue;
     // write new value to page
     $(".magicnum-text").html(currentmagicNum);
-        
+
     if (currentmagicNum === 0) {
       wins++;
-      $(".wins-text").append(wins);
+      $(".wins-text").html("Wins: " + wins);
       // startgame();
       startGame();
       alert("YOU WIN!!!");
@@ -53,29 +69,29 @@ $(document).ready(function () {
     //assign conditions for when the value hits below 0 player looses counter increases
     else if (currentmagicNum < 0) {
       losses++;
-      $(".losses-text").append(losses);
+      $(".losses-text").html("Losses: " + losses);
       startGame();
       alert("YOU LOST!!!");
     }
   })
 });
-  // $(".cry1-text").on("click", function () {
-  //   currentMagicNum = magicNum - cry1Num;
-  //   $(".magicnum-text").html(currentMagicNum);
-  // });
-  // //cry2
-  // $(".cry2-text").on("click", function () {
-  //   currentMagicNum = magicNum - cry1Num;
-  //   $(".magicnum-text").html(currentMagicNum);
-  // });
-  // //cry3
-  // $(".cry3-text").on("click", function () {
-  //   currentMagicNum = magicNum - cry1Num;
-  //   $(".magicnum-text").html(currentMagicNum);
-  // });
-  // //cry4
-  // $(".cry4-text").on("click", function () {
-  //   currentMagicNum = magicNum - cry1Num;
-  //   $(".magicnum-text").html(currentMagicNum);
-  // });
-  //assign conditions for when the value hits 0 player wins and counter increases
+// $(".cry1-text").on("click", function () {
+//   currentMagicNum = magicNum - cry1Num;
+//   $(".magicnum-text").html(currentMagicNum);
+// });
+// //cry2
+// $(".cry2-text").on("click", function () {
+//   currentMagicNum = magicNum - cry1Num;
+//   $(".magicnum-text").html(currentMagicNum);
+// });
+// //cry3
+// $(".cry3-text").on("click", function () {
+//   currentMagicNum = magicNum - cry1Num;
+//   $(".magicnum-text").html(currentMagicNum);
+// });
+// //cry4
+// $(".cry4-text").on("click", function () {
+//   currentMagicNum = magicNum - cry1Num;
+//   $(".magicnum-text").html(currentMagicNum);
+// });
+//assign conditions for when the value hits 0 player wins and counter increases
