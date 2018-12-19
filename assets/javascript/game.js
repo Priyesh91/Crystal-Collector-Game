@@ -77,26 +77,9 @@ $(document).ready(function () {
 });
 
 
-// $(".cry1-text").on("click", function () {
-//   currentMagicNum = magicNum - cry1Num;
-//   $(".magicnum-text").html(currentMagicNum);
-// });
-// //cry2
-// $(".cry2-text").on("click", function () {
-//   currentMagicNum = magicNum - cry1Num;
-//   $(".magicnum-text").html(currentMagicNum);
-// });
-// //cry3
-// $(".cry3-text").on("click", function () {
-//   currentMagicNum = magicNum - cry1Num;
-//   $(".magicnum-text").html(currentMagicNum);
-// });
-// //cry4
-// $(".cry4-text").on("click", function () {
-//   currentMagicNum = magicNum - cry1Num;
-//   $(".magicnum-text").html(currentMagicNum);
-// });
-//assign conditions for when the value hits 0 player wins and counter increases
+// code below is for animation of crystals. This was the last resort work around since there was conflicts between github recognizing script link from other sources.
+
+
 // VERSION: 2.3 LAST UPDATE: 11.07.2013
 /* 
  * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
