@@ -1,22 +1,43 @@
 
 body {
   background-image: url("./../images/space1.jpg");
-  background-image: fluid;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size : cover;
 }
 .crytitle {
-  font-size: 100px;
+  font-size: 110px;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  color: rgb(66, 231, 176)
-}
-.instruction {
-  color: white;
+  color: rgb(35, 240, 171)
 }
 .p1 {
   font-size: 18px;
   padding: 0;
   margin: 0;
-  color: rgb(51, 196, 147);
+  color:  rgb(35, 240, 171);
+}
+.p2 {
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  color: rgb(35, 240, 171);
 }
 .button {
-  width: 200px;
+  width: 150px;
   }
+.mnum {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 22px;
+  color: rgb(34, 0, 78);
+  background-image: url("./../images/mbg.jpg");
+  width: 100%;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-weight: bold;
+}
+.magicnum-text {
+  font-size: 75px;
+  color:rgb(34, 0, 78);
+}
+ 
